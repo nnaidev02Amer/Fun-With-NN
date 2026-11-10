@@ -16,7 +16,7 @@
  */
 import { copyFile, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(scriptDir, '../dist');
@@ -27,7 +27,7 @@ const appHtmlPath = path.join(distDir, 'app.html');
 const EMPTY_ROOT = '<div id="root"></div>';
 
 async function main() {
-  const { renderLandingPage } = await import(ssrEntry);
+  const { renderLandingPage } = await import(pathToFileURL(ssrEntry).href);
   const landingHtml = renderLandingPage();
 
   await copyFile(indexHtmlPath, appHtmlPath);

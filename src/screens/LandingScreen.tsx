@@ -7,7 +7,6 @@ import { SAFETY_WORLDS } from '../data/safetyWorlds'
 import { useLanguage } from '../i18n/LanguageProvider'
 import { localize } from '../i18n/localize'
 import { Logo } from '../components/Logo'
-import { Footer } from '../components/Footer'
 
 interface LandingScreenProps {
   onStart: () => void
@@ -68,7 +67,7 @@ function SectionLabel({ text }: { text: string }) {
 }
 
 export function LandingScreen({ onStart, hasProgress }: LandingScreenProps) {
-  const { t, language, setLanguage } = useLanguage()
+  const { t, language } = useLanguage()
 
   const totalCodingLessons = WORLDS.filter(w => !w.isBonus).reduce((sum, w) => sum + w.lessonCount, 0)
   const totalThinkingLessons = THINKING_WORLDS.reduce((sum, w) => sum + w.lessonCount, 0)
@@ -110,22 +109,6 @@ export function LandingScreen({ onStart, hasProgress }: LandingScreenProps) {
           </motion.div>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center bg-white/5 rounded-xl border border-white/10 overflow-hidden">
-              {(['en', 'id'] as const).map(lang => (
-                <button
-                  key={lang}
-                  onClick={() => setLanguage(lang)}
-                  className={`px-3 py-1.5 text-xs font-bold uppercase tracking-widest transition-colors ${
-                    language === lang
-                      ? 'bg-purple-600 text-white'
-                      : 'text-white/40 hover:text-white'
-                  }`}
-                >
-                  {lang}
-                </button>
-              ))}
-            </div>
-
             <motion.button
               onClick={onStart}
               className="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm text-white"
@@ -634,8 +617,6 @@ export function LandingScreen({ onStart, hasProgress }: LandingScreenProps) {
           </FadeIn>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

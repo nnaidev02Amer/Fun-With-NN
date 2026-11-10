@@ -14,7 +14,7 @@ interface HeaderProps {
 }
 
 export function Header({ progress }: HeaderProps) {
-  const { language, setLanguage, t } = useLanguage()
+  const { t } = useLanguage()
   const navigate = useNavigate()
   const location = useLocation()
   const [statsOpen, setStatsOpen] = useState(false)
@@ -90,22 +90,6 @@ export function Header({ progress }: HeaderProps) {
           <Star className="w-3.5 h-3.5 text-yellow-300 fill-yellow-300 shrink-0" />
           <span className="font-bold text-yellow-200 text-sm">{shownStars}</span>
         </button>
-
-        {/* Language toggle */}
-        <div className="flex rounded-xl overflow-hidden border border-purple-800/40 shrink-0">
-          <button
-            onClick={() => setLanguage('en')}
-            className={`px-2.5 py-1.5 text-xs font-bold transition-colors ${language === 'en' ? 'bg-purple-600 text-white' : 'text-purple-300 hover:text-white hover:bg-purple-900/40'}`}
-          >
-            EN
-          </button>
-          <button
-            onClick={() => setLanguage('id')}
-            className={`px-2.5 py-1.5 text-xs font-bold transition-colors ${language === 'id' ? 'bg-purple-600 text-white' : 'text-purple-300 hover:text-white hover:bg-purple-900/40'}`}
-          >
-            ID
-          </button>
-        </div>
       </div>
 
       {statsOpen && (

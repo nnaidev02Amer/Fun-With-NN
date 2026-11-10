@@ -3,7 +3,6 @@ import { Routes, Route, Navigate, useNavigate, useParams, Outlet } from 'react-r
 import { LanguageProvider } from './i18n/LanguageProvider'
 import { LanguageUrlSync } from './i18n/LanguageUrlSync'
 import { Header } from './components/Header'
-import { Footer } from './components/Footer'
 import { BlocksHome } from './screens/BlocksHome'
 import { LessonScreen } from './screens/LessonScreen'
 import { LandingScreen } from './screens/LandingScreen'
@@ -53,7 +52,6 @@ function GameLayout() {
       <main className="relative z-10">
         <Outlet />
       </main>
-      <Footer />
     </div>
   )
 }
