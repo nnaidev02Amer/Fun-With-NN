@@ -1,4 +1,4 @@
-# CodeKids 🚀
+# Fun with NN 🚀
 
 A fun, free learning adventure for kids ages 5–14. Three parallel paths: visual block coding, brain-training puzzles, and digital citizenship. No downloads, no logins, no ads.
 

@@ -14,7 +14,7 @@ export function Logo({ size = 40, className = '' }: LogoProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="CodeKids logo"
+      aria-label="Fun with NN logo"
     >
       <defs>
         <linearGradient id={GRAD_ID} x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">

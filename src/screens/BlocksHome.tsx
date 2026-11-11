@@ -49,12 +49,12 @@ export function BlocksHome({ getLessonProgress, isLessonUnlocked, selectedWorldI
             🚀
           </motion.div>
           <h1 className="text-4xl sm:text-5xl font-black text-white mb-3 leading-tight">
-            {t('home.welcome').split('CodeKids').map((part, i, arr) =>
+            {t('home.welcome').split('Fun with NN').map((part, i, arr) =>
               i < arr.length - 1 ? (
                 <span key={i}>
                   {part}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                    CodeKids
+                    Fun with NN
                   </span>
                 </span>
               ) : (

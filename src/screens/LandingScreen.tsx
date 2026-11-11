@@ -101,7 +101,7 @@ export function LandingScreen({ onStart, hasProgress }: LandingScreenProps) {
           >
             <Logo size={36} />
             <div className="leading-none">
-              <div className="font-extrabold text-white text-lg tracking-tight">CodeKids</div>
+              <div className="font-extrabold text-white text-lg tracking-tight">Fun with NN</div>
               <div className="text-[11px] text-purple-400 font-semibold hidden sm:block mt-0.5">
                 {t('landing.nav.tagline')}
               </div>
@@ -223,7 +223,7 @@ export function LandingScreen({ onStart, hasProgress }: LandingScreenProps) {
       </section>
 
       {/* ── TWO PATHS ─────────────────────────────── */}
-      <section className="py-28 sm:py-32 px-5 sm:px-8 bg-white/[0.015] border-y border-white/[0.06]">
+      <section id="activities" className="scroll-mt-24 py-28 sm:py-32 px-5 sm:px-8 bg-white/[0.015] border-y border-white/[0.06]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
             <SectionLabel text={t('landing.paths.label')} />
@@ -553,7 +553,7 @@ export function LandingScreen({ onStart, hasProgress }: LandingScreenProps) {
       </section>
 
       {/* ── ORIGIN STORY ─────────────────────────── */}
-      <section className="py-20 sm:py-24 px-5 sm:px-8">
+      <section id="about" className="scroll-mt-24 py-20 sm:py-24 px-5 sm:px-8">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
             <div

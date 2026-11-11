@@ -1,5 +1,7 @@
 import { renderToString } from 'react-dom/server'
 import { LanguageProvider } from './i18n/LanguageProvider'
+import { StaticRouter } from 'react-router-dom'
+import { Footer } from './components/Footer'
 import { LandingScreen } from './screens/LandingScreen'
 
 /**
@@ -11,7 +13,10 @@ import { LandingScreen } from './screens/LandingScreen'
 export function renderLandingPage(): string {
   return renderToString(
     <LanguageProvider forcedInitialLanguage="en">
-      <LandingScreen onStart={() => {}} hasProgress={false} />
+      <StaticRouter location="/">
+        <LandingScreen onStart={() => {}} hasProgress={false} />
+        <Footer />
+      </StaticRouter>
     </LanguageProvider>,
   )
 }

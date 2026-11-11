@@ -68,7 +68,7 @@ export function Header({ progress }: HeaderProps) {
             <motion.div className="flex items-center gap-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Logo size={32} className="shrink-0" />
               <div className="leading-tight hidden sm:block">
-                <div className="font-black text-white text-lg">CodeKids</div>
+                <div className="font-black text-white text-lg">Fun with NN</div>
                 <div className="text-xs text-purple-300 font-semibold">{t('landing.nav.tagline')}</div>
               </div>
             </motion.div>

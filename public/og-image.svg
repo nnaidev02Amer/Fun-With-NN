@@ -43,7 +43,7 @@
   <path d="M127 155L113 205" fill="none" stroke="#E9D5FF" stroke-width="4" stroke-linecap="round"/>
 
   <!-- App name -->
-  <text x="180" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="-2">CodeKids</text>
+  <text x="180" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" fill="white" letter-spacing="-2">Fun with NN</text>
 
   <!-- Tagline -->
   <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#A78BFA">Learn to Code &amp; Train Your Brain!</text>
@@ -76,7 +76,7 @@
   <text x="333" y="428" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#A78BFA" text-anchor="middle">No Login</text>
 
   <!-- Domain: baseline y=530, clear gap from badges -->
-  <text x="80" y="530" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#8B5CF6">coding.mazipan.space</text>
+  <text x="80" y="530" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#8B5CF6">nnaisolution.com</text>
 
   <!-- Right side decorative blocks -->
   <g transform="translate(940, 130)">

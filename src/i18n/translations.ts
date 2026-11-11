@@ -53,7 +53,7 @@ const en: Translations = {
 
   'landing.origin.label': 'The Story Behind It',
   'landing.origin.title': 'Built by a parent, for his kids',
-  'landing.origin.desc': 'CodeKids started as a personal weekend project. A parent wanted his children to discover the joy of coding and critical thinking — without ads, distractions, or sign-ups. Every puzzle and lesson has been playtested by real kids.',
+  'landing.origin.desc': 'Fun with NN started as a personal weekend project. A parent wanted his children to discover the joy of coding and critical thinking — without ads, distractions, or sign-ups. Every puzzle and lesson has been playtested by real kids.',
   'landing.origin.tag.built': 'Built by a parent',
   'landing.origin.tag.tested': 'Tested by real kids',
 
@@ -184,7 +184,7 @@ const en: Translations = {
   'mascot.hint.prefix': '💡 Hint:',
 
   // ── Home screen ──────────────────────────────
-  'home.welcome': 'Welcome to CodeKids!',
+  'home.welcome': 'Welcome to Fun with NN!',
   'home.subtitle': 'Pick a world and start your coding adventure! 🌟',
 
   // ── Reward messages (by star count 1–3, variant 0–2) ────
@@ -354,7 +354,7 @@ const id: Translations = {
 
   'landing.origin.label': 'Cerita di Baliknya',
   'landing.origin.title': 'Dibuat oleh orang tua, untuk anaknya',
-  'landing.origin.desc': 'CodeKids bermula dari proyek pribadi akhir pekan. Seorang ayah ingin anak-anaknya merasakan keseruan coding dan berpikir kritis — tanpa iklan, gangguan, atau perlu mendaftar. Setiap teka-teki dan pelajaran telah diuji langsung oleh anak-anak nyata.',
+  'landing.origin.desc': 'Fun with NN bermula dari proyek pribadi akhir pekan. Seorang ayah ingin anak-anaknya merasakan keseruan coding dan berpikir kritis — tanpa iklan, gangguan, atau perlu mendaftar. Setiap teka-teki dan pelajaran telah diuji langsung oleh anak-anak nyata.',
   'landing.origin.tag.built': 'Dibuat oleh orang tua',
   'landing.origin.tag.tested': 'Diuji oleh anak-anak nyata',
 
@@ -485,7 +485,7 @@ const id: Translations = {
   'mascot.hint.prefix': '💡 Petunjuk:',
 
   // ── Home screen ──────────────────────────────
-  'home.welcome': 'Selamat Datang di CodeKids!',
+  'home.welcome': 'Selamat Datang di Fun with NN!',
   'home.subtitle': 'Pilih dunia dan mulai petualangan coding-mu! 🌟',
 
   // ── Reward messages (by star count 1–3, variant 0–2) ────

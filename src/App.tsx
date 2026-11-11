@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, Navigate, useNavigate, useParams, Outlet } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate, useParams, useLocation, Outlet } from 'react-router-dom'
 import { LanguageProvider } from './i18n/LanguageProvider'
 import { LanguageUrlSync } from './i18n/LanguageUrlSync'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import { ScrollManager } from './components/ScrollManager'
 import { BlocksHome } from './screens/BlocksHome'
 import { LessonScreen } from './screens/LessonScreen'
 import { LandingScreen } from './screens/LandingScreen'
@@ -23,9 +25,12 @@ import type { WorldId, ThinkingWorldId, SafetyWorldId } from './types'
 
 function GameLayout() {
   const { progress } = useProgress()
+  const { pathname } = useLocation()
+  // Hide the footer on full-screen lesson play (/app/<path>/world/<id>/<n>).
+  const isLesson = /^\/app\/[^/]+\/world\/[^/]+\/[^/]+/.test(pathname)
 
   return (
-    <div className="min-h-screen bg-[#0A0618] font-nunito">
+    <div className="min-h-screen flex flex-col bg-[#0A0618] font-nunito">
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-pink-600/8 rounded-full blur-3xl" />
@@ -49,9 +54,11 @@ function GameLayout() {
 
       <Header progress={progress} />
 
-      <main className="relative z-10">
+      <main className="relative z-10 flex-1">
         <Outlet />
       </main>
+
+      {!isLesson && <Footer />}
     </div>
   )
 }
@@ -208,10 +215,13 @@ function LandingRoute() {
   }, [progress.xp, progress.totalStars])
 
   return (
-    <LandingScreen
-      onStart={() => navigate('/app')}
-      hasProgress={hasProgress}
-    />
+    <>
+      <LandingScreen
+        onStart={() => navigate('/app')}
+        hasProgress={hasProgress}
+      />
+      <Footer />
+    </>
   )
 }
 
@@ -241,6 +251,7 @@ export default function App({ isHydrating }: AppProps) {
   return (
     <LanguageProvider forcedInitialLanguage={isHydrating ? 'en' : undefined}>
       <LanguageUrlSync />
+      <ScrollManager />
       <Routes>
         <Route path="/" element={<LandingRoute />} />
         <Route path="/app" element={<GameLayout />}>

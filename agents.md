@@ -1,4 +1,4 @@
-# CodeKids — Agent Index
+# Fun with NN — Agent Index
 
 A fully static, browser-based coding learning platform for kids ages 5–14.  
 No backend · No login · No ads · Everything runs in the browser.
